@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <header className="header">
+        <header>
             <img src={logo} srcSet={`${mobileLogo} 1000px`} alt="logo du site web Kasa" />
             <nav>
                 <Link className="active" to="/">Accueil</Link>
