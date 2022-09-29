@@ -9,7 +9,7 @@ const Header = () => {
             <img src={logo} srcSet={`${mobileLogo} 1000px`} alt="logo du site web Kasa" />
             <nav>
                 <Link className="active" to="/">Accueil</Link>
-                <Link to="/about">A</Link>
+                <Link to="/about">A Propos</Link>
             </nav>
         </header>
     )
