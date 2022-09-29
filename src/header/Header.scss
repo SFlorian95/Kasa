@@ -1,60 +1,44 @@
-header {
-    display: flex;
-    padding: 20px;
-    position: relative;
-    
-    img {
-        width: 30%;
-        object-fit: none;
-    }
-}
+@import '../styles/variables.scss';
 
 nav {
-    display: flex;
-    padding: 2%;
-    position: absolute;
-    right: 0%;
-    top: 25%;
-    bottom: 25%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 142.6%;
 
-    /*à retirer*/
-    a.active {
-        text-decoration-line: underline;
-    }
+  img {
+    height: 68px;
+  }
 
+  div {
     a {
-        display: flex;
-        padding: 20px;
-        align-items: flex-end;
-        color: #FF6060;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 142.6%;
-        text-decoration: none;
+      color: $primary;
+      text-decoration: none;
+      padding: 20px 20px;
 
-        &:active {
-            text-decoration-line: underline;
-        }
+      &.active {
+        text-decoration-line: underline;
+      }
     }
+  }
 }
 
-@media screen and (max-width: 700px) {
-    header {
-
-        img {
-            width: 145px;
-            object-fit: contain;
-         }
+@media screen and (max-width: 748px) {
+  nav {
+    padding: 20px;
+    img {
+      height: 47px;
     }
-
-    nav {
-        
-        a {
-            font-size: 12px;
-            text-transform: uppercase;
-            padding: 3px;
-        }
+    div {
+      a {
+        font-size: 12px;
+        padding: 10px 10px;
+        text-transform: uppercase;
+      }
     }
+  }
 }
