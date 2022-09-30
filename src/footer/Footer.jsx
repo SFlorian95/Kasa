@@ -3,10 +3,10 @@ import footerLogo from '../assets/footer-logo.png'
 
 const Footer = () => {
     return (
-        <footer>
+        <section id='footer'>
             <img src={footerLogo} alt="le logo Kasa" />
             <p>© 2020 Kasa. All rights reserved</p>
-        </footer>
+        </section>
     )
 }
 export default Footer

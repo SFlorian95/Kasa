@@ -1,0 +1,29 @@
+@import '../styles/variables.scss';
+
+.tags {
+  display: flex;
+
+  .tag {
+    background-color: $primary;
+    height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 142.6%;
+    text-align: center;
+    color: white;
+    margin-right: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .tag {
+    font-size: 10px;
+    height: 18px;
+  }
+}
