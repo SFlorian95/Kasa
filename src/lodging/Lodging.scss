@@ -1,0 +1,135 @@
+@import '../styles/variables.scss';
+
+section#lodging {
+  margin: 0px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      width: 100%;
+      display: flex;
+
+      .title {
+        width: 50%;
+        h1 {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 142.6%;
+          color: $primary;
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 142.6%;
+          color: $primary;
+          margin-top: 0;
+        }
+        .tags {
+          display: flex;
+        }
+      }
+      .sub-header {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+
+        .host {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 142.6%;
+            color: $primary;
+            padding: 10px;
+          }
+          img {
+            width: 64px;
+            height: 64px;
+            border-radius: 32px;
+            margin: 10px;
+          }
+        }
+        .stars {
+          display: flex;
+        }
+      }
+    }
+
+    .dropdowns {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+
+      .dropdown-container {
+        width: 48%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 748px) {
+  section#lodging {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .container {
+      .header {
+        flex-direction: column;
+        .title {
+          width: 100%;
+          h1 {
+            font-size: 18px;
+          }
+          h2 {
+            font-size: 14px;
+          }
+        }
+
+        .sub-header {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .host {
+            order: 2;
+            span {
+              font-size: 12px;
+            }
+            img {
+              height: 32px;
+              width: 32px;
+            }
+          }
+          .stars {
+            order: 1;
+          }
+        }
+      }
+      .dropdowns {
+        margin-top: 5px;
+        flex-direction: column;
+
+        .dropdown-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

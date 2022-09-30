@@ -1,22 +1,32 @@
 .card {
-    display: flex;
-    align-items: flex-end;
-    height: 340px;
-    width: 340px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #FF6060 60%, rgba(0, 0, 0, 0.5) 100%);
-    margin-bottom: 20px;
+  border-radius: 10px;
+  height: 340px;
+  width: 340px;
+  background: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  display: flex;
+  align-items: flex-end;
+  margin: 2%;
+  cursor: pointer;
+  text-decoration: none;
 
-    span {
-        padding: 10px;
-        color: white;
-    }
+  span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    padding: 20px;
+    color: white;
+  }
 }
 
-@media screen and (max-width: 700px) {
-    .card {
-        height: 255px;
-        width: 335px;
-    }
-
+@media screen and (max-width: 748px) {
+  .card {
+    margin: 20px 0 0 0;
+    height: 255px;
+    width: 100%;
+  }
 }
