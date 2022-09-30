@@ -1,30 +1,26 @@
 import './Home.scss'
-import banner from '../assets/banner.png'
-import Card from '../card/Card'
 import { useGet } from '../utils/hook'
+import Loader from '../loader/Loader'
+import Card from '../card/Card'
 
 const Home = () => {
-
   const { data, isLoading, error } = useGet()
 
-  if (error) {
-    return <span>error {error}</span>
-  }
+  if (error) return <span>Oups il y a eu un problème</span>
 
   return (
-    <div className="home">
+    <section id="home">
       <div className="banner">
-        <img src={banner} alt="bannière de la page d'accueil contenant le titre : Chez vous, partout et ailleurs" />
         <span>Chez vous, partout et ailleurs</span>
       </div>
-      <div className="card-container">
+      <div className="gallery">
         {isLoading ? (
-          <span>Loading...</span>
+          <Loader />
         ) : (
-          data.map((element) => <Card key={element.id} data={element} />)
+          data.map((item) => <Card key={item.id} item={item} />)
         )}
       </div>
-    </div>
+    </section>
   )
 }
 

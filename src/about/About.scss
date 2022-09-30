@@ -1,35 +1,57 @@
-div.about {
+section#about {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.banner {
+    width: 100%;
+    height: 223px;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.3)
+      url(../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+
+  .container-dropdowns {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
-    div.banner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 90%;
-        height: 223px;
-        color: white;
-        margin-bottom: 10px;
-        img {
-            width: 100%;
-            border-radius: 25px;
-            mix-blend-mode: darken;
-            z-index: 2;
-            filter: brightness(70%);
-        }
-    }
+    width: 80%;
 
+    .dropdown-container {
+      margin-top: 30px;
+    }
+  }
 }
 
-@media screen and (max-width:700px) {
-    div.about {
-        div.banner {
-            width: 98%;
-        }
-        img {
-            height: 300px;
-            width: 100%;
-        }
+@media screen and (max-width: 748px) {
+  section#about {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    div.banner {
+      background: rgba(0, 0, 0, 0.3)
+        url(../assets/gustavo-alves-YOXSC4zRcxw-unsplash.jpg);
+      height: 111px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-blend-mode: darken;
     }
+
+    .container-dropdowns {
+      margin-top: 10px;
+      width: 100%;
+
+      .dropdown-container {
+        margin-top: 10px;
+      }
+    }
+  }
 }

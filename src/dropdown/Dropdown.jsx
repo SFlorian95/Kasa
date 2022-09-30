@@ -1,21 +1,38 @@
 import { useState } from 'react'
-import ElementDropdown from '../element-dropdown/ElementDropdown'
+import arrowUp from '../assets/arrow_up.png'
+import arrowDown from '../assets/arrow_down.png'
 import './Dropdown.scss'
 
 const Dropdown = ({ item }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
-  return isOpen ? (
-    <div className="dropdown" onClick={() => setIsOpen(false)}>
-      <span>{ item.title }</span>
-        <ElementDropdown
-          description={item.description}
+  const description = (data) =>
+    Array.isArray(data) ? (
+      <p>
+        {data.map((element) => (
+          <span key={element}>
+            {element}
+            <br></br>
+          </span>
+        ))}
+      </p>
+    ) : (
+      <p>{data}</p>
+    )
+
+  return (
+    <div className="dropdown-container">
+      <div className="dropdown">
+        <span>{item.title}</span>
+        <img
+          src={isOpen ? arrowUp : arrowDown}
+          alt="arrow"
+          onClick={() => setIsOpen(!isOpen)}
         />
-    </div>
-  ) : (
-    <div className="dropdown-off" onClick={() => setIsOpen(true)}>
-        <span>{ item.title }</span>
+      </div>
+      {isOpen ? description(item.description) : ''}
     </div>
   )
 }
+
 export default Dropdown
